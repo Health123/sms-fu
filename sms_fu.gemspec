@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sms_fu}
-  s.version = "1.1.1"
+  s.version = "1.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brendan G. Lim"]
   s.date = %q{2010-08-23}
-  s.description = %q{SMS Fu allows you to send text messages to a mobile recipient for free.  It leverages ActionMailer or Pony for delivery of text messages through e-mail.}
+  s.description = %q{SMS Fu allows you to send text messages to a mobile recipient for free.  It leverages ActionMailer for delivery of text messages through e-mail.}
   s.email = %q{brendangl@gmail.com}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -43,13 +43,10 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
-      s.add_development_dependency(%q<pony>, [">= 1.0"])
     else
       s.add_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
-      s.add_dependency(%q<pony>, [">= 1.0"])
     end
   else
     s.add_dependency(%q<action_mailer>, [">= 3.0.0.rc2"])
-    s.add_dependency(%q<pony>, [">= 1.0"])
   end
 end
